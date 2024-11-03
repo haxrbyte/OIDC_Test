@@ -24,7 +24,7 @@ jobs:
       name: 'gcloud'
       run: |-
         gcloud config set project gcp-labs-fcg2p5xb
-        gcloud config set account '${saId}'
+        gcloud config set account 'iam-lab-7-target@${projectId}.iam.gserviceaccount.com'
         gcloud auth login --brief --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
         gcloud auth list
         gcloud projects list
